@@ -98,7 +98,7 @@
 
     <attribute>
           <id>ATTR_FREQ_O_MHZ</id>
-          <default>1611,1611,1611,1611</default>
+          <default>1250,1250,1250,1250</default>
           <writeable/>
     </attribute>
 

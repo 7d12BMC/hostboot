@@ -361,10 +361,10 @@ void* call_host_voltage_config( void *io_pArgs )
                           "call_host_voltage_config.C::"
                           "Nimbus DD2.1 -- Forcing ATTR_FREQ_X_MHZ = %d",
                           l_sys->getAttr<ATTR_FREQ_X_MHZ>());
-
+                // Force speed to 20G for NVLINK 1.0 compatible 
                 TARGETING::ATTR_FREQ_O_MHZ_type l_freq_array =
-                {OBUS_PLL_FREQ_LIST_P9N_21[0],OBUS_PLL_FREQ_LIST_P9N_21[0],
-                OBUS_PLL_FREQ_LIST_P9N_21[0], OBUS_PLL_FREQ_LIST_P9N_21[0]};
+                {OBUS_PLL_FREQ_LIST_P9N_23[1],OBUS_PLL_FREQ_LIST_P9N_23[1],
+                OBUS_PLL_FREQ_LIST_P9N_23[1], OBUS_PLL_FREQ_LIST_P9N_23[1]};
                 assert(l_proc->
                        trySetAttr<TARGETING::ATTR_FREQ_O_MHZ>(l_freq_array),
                        "call_host_voltage_config.C failed to set ATTR_FREQ_O_MHZ");

@@ -44,6 +44,12 @@ errlHndl_t getObusPllBucket(TARGETING::Target * i_chipTarget,
         tryGetAttr<TARGETING::ATTR_FREQ_O_MHZ>(l_freq_array),
         "getPllBucket() failed to get ATTR_FREQ_O_MHZ");
 
+    // Force O_BUS speed to 1250
+    l_freq_array[0] = 1250;
+    l_freq_array[1] = 1250;
+    l_freq_array[2] = 1250;
+    l_freq_array[3] = 1250;
+
     // Get the frequency list from the chip
     const uint32_t *l_freqList = nullptr;
 
